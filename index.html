@@ -8,6 +8,8 @@ summary: "página principal"
 {% for post in site.posts limit: 5 %}
   <article class="index-page">
     <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
-    {{ post.excerpt }}
+    {% if page.bg %}
+      <aside class="sidebar" role="note" style="background-image: url({{ site.url }}{{ site.images }}/{{ post.bg }})">
+    {% endif %}
   </article>
 {% endfor %}
