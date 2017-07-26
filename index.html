@@ -9,7 +9,7 @@ summary: "página principal"
   <article class="index-page">
     <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
     {% if post.bg %}
-      <aside class="sidebar" role="note" style="background-image: url({{ site.url }}{{ site.images }}/{{ post.bg }})">
+      <img src="{{ site.url }}{{ site.images }}/{{ post.bg }}">
     {% endif %}
   </article>
 {% endfor %}
